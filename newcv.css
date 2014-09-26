@@ -17,8 +17,19 @@ em {
 strong {
 	font-weight: bold;
 }
-section {
-	/*box-sizing: border-box;*/
+#work-experience, #education {
+	display: block;
+	margin-left: 16%;
+	padding-left: 320px;
+	margin-top: 20px;
+	padding-right: 15%;
+	max-width: 600px;
+}
+#data {
+	float: left;
+	width: 300px;
+	margin-left: 15%;
+	margin-right: 20px;
 }
 a, a:visited {
 	color: #3BE;
@@ -28,17 +39,32 @@ a, a:visited {
 /******************************************************************************/
 /* Header */
 header {
-	text-align: center;
-	background-color: #444;
+	/*text-align: center;*/
+	/*background-color: #444;*/
 	font-family: 'IM Fell English SC', serif;
 	/*font-family: 'IM Fell DW Pica SC', serif;*/
 	font-family: 'Poiret One', cursive;
 	color: #EEE;
 	overflow: auto;
-	padding: 40px;
+	padding: 40px 0;
+	background-image: url('img/blackmamba_@2X.png');
+	/*background-image: url('img/blackmamba.png');*/
+	/*background-image: url('img/broken_noise_@2X.png');*/
+	/*background-image: url('img/broken_noise.png');*/
+	/*background-image: url('img/dark_wall_@2X.png');*/
+	/*background-image: url('img/dark_wall.png');*/
+	/*background-image: url('img/gray_sand_@2X.png');*/
+	/*background-image: url('img/gray_sand.png');*/
+	/*background-image: url('img/micro_carbon_@2X.png');*/
+	/*background-image: url('img/micro_carbon.png');*/
+	/*background-image: url('img/skewed_print_@2X.png');*/
+	/*background-image: url('img/skewed_print.png');*/
 }
-h1, h2 {
-	display: inline;
+h1,h2 {
+	/*display: inline;
+	*/
+	float:left;
+	height: 100%;
 }
 h1 {
 	font-size: 300%;
@@ -46,10 +72,14 @@ h1 {
 	/*margin-right: 10px;*/
 	padding-right: 10px;
 	border-right: solid 1px #EEE;
+	text-align: right;
+	width: 300px;
+	margin-left: 15%;
+	padding-right: 20px;
 }
 h2 {
 	font-size: 150%;
-	margin-left: 10px;
+	margin-left: 20px;
 /*	margin: 40px;*/
 }
 
@@ -57,11 +87,7 @@ h2 {
 /******************************************************************************/
 /* Left column */
 #data {
-	float: left;
-	width: 300px;
 /*	padding: 15px 15px 15px 15px;*/
-	margin-left: 15%;
-	margin-right: 20px;
 	padding-right: 20px;
 	margin-top: 20px;
 	border-right: solid 1px #EEE;
@@ -88,11 +114,6 @@ h2 {
 
 /******************************************************************************/
 /* Right column */
-section {
-	display: block;
-	margin-left: 50%;
-	margin-top: 20px;
-}
 h3 {
 	font-weight: bold;
 	font-size: 150%;
