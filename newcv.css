@@ -1,75 +1,68 @@
-/* General setup & layout */
+/******************************************************************************/
+/* General styles */
+
 html, body {
-	font-family: Roboto, Helvetica, sans-serif;
-	font-family: 'Poiret One', cursive;
-	font-family: 'Ubuntu', sans-serif;
-	font-family: 'Open Sans Condensed', sans-serif;
-	font-family: 'Roboto Condensed', sans-serif;
 	font-family: 'Roboto', sans-serif;
-	font-weight: lighter;
 	line-height: 180%;
 	font-size: 14px;
 }
+
 em {
 	font-style: italic;
-	font-size: 90%;
+	font-size: 12px;
 }
+
 strong {
 	font-weight: bold;
 }
-#work-experience, #education {
-	display: block;
-	margin-left: 16%;
-	padding-left: 320px;
-	margin-top: 20px;
-	padding-right: 15%;
-	max-width: 600px;
-}
-#data {
-	float: left;
-	width: 300px;
-	margin-left: 15%;
-	margin-right: 20px;
-}
+
 a, a:visited {
 	color: #3BE;
 	text-decoration: none;
 }
 
+a:hover {
+	text-decoration: underline;
+}
+
+
+/******************************************************************************/
+/* Layout */
+
+#data { /* left column */
+	float: left;
+	width: 300px;
+	margin-left: 15%;
+	margin-right: 20px;
+}
+
+#work-experience, #education { /* right column */
+	display: block;
+	margin-left: 16%;
+	padding-left: 320px;
+	padding-right: 15%;
+	max-width: 720px;
+}
+
+
 /******************************************************************************/
 /* Header */
+
 header {
-	/*text-align: center;*/
-	/*background-color: #444;*/
-	font-family: 'IM Fell English SC', serif;
-	/*font-family: 'IM Fell DW Pica SC', serif;*/
 	font-family: 'Poiret One', cursive;
 	color: #EEE;
 	overflow: auto;
 	padding: 40px 0;
 	background-image: url('img/blackmamba_@2X.png');
-	/*background-image: url('img/blackmamba.png');*/
-	/*background-image: url('img/broken_noise_@2X.png');*/
-	/*background-image: url('img/broken_noise.png');*/
-	/*background-image: url('img/dark_wall_@2X.png');*/
-	/*background-image: url('img/dark_wall.png');*/
-	/*background-image: url('img/gray_sand_@2X.png');*/
-	/*background-image: url('img/gray_sand.png');*/
-	/*background-image: url('img/micro_carbon_@2X.png');*/
-	/*background-image: url('img/micro_carbon.png');*/
-	/*background-image: url('img/skewed_print_@2X.png');*/
-	/*background-image: url('img/skewed_print.png');*/
 }
-h1,h2 {
-	/*display: inline;
-	*/
+
+h1, h2 {
 	float:left;
 	height: 100%;
 }
+
 h1 {
 	font-size: 300%;
-	/*margin: 40px;*/
-	/*margin-right: 10px;*/
 	padding-right: 10px;
 	border-right: solid 1px #EEE;
 	text-align: right;
@@ -77,115 +70,135 @@ h1 {
 	margin-left: 15%;
 	padding-right: 20px;
 }
+
 h2 {
 	font-size: 150%;
 	margin-left: 20px;
-/*	margin: 40px;*/
 }
 
 
 /******************************************************************************/
 /* Left column */
+
 #data {
-/*	padding: 15px 15px 15px 15px;*/
 	padding-right: 20px;
 	margin-top: 20px;
 	border-right: solid 1px #EEE;
 	text-align: right;
 }
+
 #data h4 {
+	font-size: 16px;
 	font-weight: bold;
 	margin-top: 20px;
 }
-/*
-#data h4:first-child {
-	margin-top: 0;
-}
-*/
+
 .tag-list li {
 	display: inline;
 }
+
 .tag-list li::after {
 	content: ", ";
 }
+
 .tag-list li:last-child::after {
 	content: "";
 }
 
 /******************************************************************************/
 /* Right column */
+
+#work-experience, #education {
+	margin-top: 20px;
+}
+
 h3 {
 	font-weight: bold;
 	font-size: 150%;
 	color: #444;
 	margin: 40px 0 20px;
 }
+
 div.job {
 	margin-top: 20px;
 }
+
 h5.timeline {
 	font-weight: bold;
 	font-style: italic;
 	font-size: 90%;
 	color: #000;
 }
+
 h5.position {
 	font-weight: bold;
 	font-size: 120%;
 	color: #000;
 }
-.topics-list {
-	/*clear: both;*/
-}
-.topics-list li::before {
-/*	margin-left: 30px;*/
-}
-.topics-list li::before,
-.bullet-list li::before {
+
+.topics-list li::before, .bullet-list li::before {
 	content: '\2713\00a0';
 }
+
+.bullet-list {
+	margin-left: 10px;
+}
+
 .company-description, .fineprint {
 	color: #777;
 	font-style: italic;
 	font-size: 90%;
-	line-height: 180%;
+}
+
+.job-description {
+	font-style: italic;
+	font-size: 13px;
+	line-height: 18px;
+	margin: 5px 0;
+	color: #777;
 }
 
 
 /******************************************************************************/
 /* Education */
+
 #education h5.position {
 	font-weight: normal;
 }
+
 #education dl dt {
 	float: left;
 	clear: both;
 }
+
 #education dl dt::after {
 	content: '\00a0';
 }
+
 #education dl dd {
-	font-weight: bold;
 	float: left;
 	color: #222;
 }
+
 #education dl dd::after {
 	clear: both;
-	content: " ";
+	content: "";
 }
+
 #education dl::after {
 	clear: both;
-	content: " ";
+	display: block;
+	content: "";
 }
+
 .fineprint {
 	clear: both;
 }
 
 /******************************************************************************/
 /* Footer */
-footer hr {
-	width: 90%;
-	background-color: #777;
-	margin: 20px 0;
+footer {
+	margin: 40px 15%;
+	border-top: solid 1px #EEE;
 }
 
