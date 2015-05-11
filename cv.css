@@ -2,14 +2,19 @@
 /* General styles */
 
 html, body {
-	font-family: 'Roboto', sans-serif;
-	line-height: 180%;
-	font-size: 14px;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+	line-height: 1.9;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
 }
 
 em {
-	font-style: italic;
-	font-size: 12px;
+    font-size: 12px;
+    font-style: italic;
 }
 
 strong {
@@ -29,19 +34,19 @@ a:hover {
 /******************************************************************************/
 /* Layout */
 
-#data { /* left column */
-	float: left;
-	width: 300px;
-	margin-left: 15%;
-	margin-right: 20px;
+.container {
+    margin: 20px auto;
+    width: 100%;
+    max-width: 900px;
 }
 
-#work-experience, #education { /* right column */
-	display: block;
-	margin-left: 16%;
-	padding-left: 320px;
-	padding-right: 15%;
-	max-width: 720px;
+#data { /* left column */
+    text-align: center;
+}
+
+#data, #work-experience, #education, header h1, header h2 {
+    box-sizing: border-box;
+    padding: 0 20px;
 }
 
 
@@ -49,113 +54,94 @@ a:hover {
 /* Header */
 
 header {
-	font-family: 'Poiret One', cursive;
-	color: #EEE;
-	overflow: auto;
-	padding: 40px 0;
-	background-image: url('img/blackmamba_@2X.png');
-}
-
-h1, h2 {
-	float:left;
-	height: 100%;
+    background-image: url('img/blackmamba_@2X.png');
+    color: #EEE;
+    font-family: 'Poiret One', cursive;
+    overflow: auto;
+    padding: 10px 0;
+    text-align: center;
 }
 
 h1 {
-	font-size: 300%;
-	padding-right: 10px;
-	border-right: solid 1px #EEE;
-	text-align: right;
-	width: 300px;
-	margin-left: 15%;
-	padding-right: 20px;
+	font-size: 40px;
+    line-height: 1;
+    margin-bottom: 15px;
 }
 
 h2 {
 	font-size: 150%;
-	margin-left: 20px;
+    font-style: italic;
 }
 
 
 /******************************************************************************/
 /* Left column */
 
-#data {
-	padding-right: 20px;
-	margin-top: 20px;
-	border-right: solid 1px #EEE;
-	text-align: right;
-}
-
 #data h4 {
 	font-size: 16px;
 	font-weight: bold;
-	margin-top: 20px;
+    margin-bottom: 5px;
+}
+#data h4:not(:first-of-type) {
+    margin-top: 30px;
+}
+
+#data p {
+    margin-bottom: 10px;
 }
 
 .tag-list li {
 	display: inline;
 }
 
-.tag-list li::after {
+.tag-list li:not(:last-child):after {
 	content: ", ";
-}
-
-.tag-list li:last-child::after {
-	content: "";
 }
 
 /******************************************************************************/
 /* Right column */
 
-#work-experience, #education {
-	margin-top: 20px;
-}
-
 h3 {
-	font-weight: bold;
-	font-size: 150%;
-	color: #444;
+    color: #444;
+    font-size: 150%;
+    font-weight: bold;
 	margin: 40px 0 20px;
+    text-align: center;
 }
 
 div.job {
-	margin-top: 20px;
+	margin-top: 30px;
 }
 
 h5.timeline {
-	font-weight: bold;
-	font-style: italic;
-	font-size: 90%;
-	color: #000;
+    color: #000;
+    font-size: 12px;
+    font-style: italic;
 }
 
 h5.position {
-	font-weight: bold;
-	font-size: 120%;
-	color: #000;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 8px 0;
 }
 
 .topics-list li::before, .bullet-list li::before {
 	content: '\2713\00a0';
 }
 
-.bullet-list {
-	margin-left: 10px;
-}
-
 .company-description, .fineprint {
 	color: #777;
-	font-style: italic;
-	font-size: 90%;
+    font-size: 90%;
+    font-style: italic;
 }
 
 .job-description {
-	font-style: italic;
-	font-size: 13px;
-	line-height: 18px;
-	margin: 5px 0;
-	color: #777;
+    color: #777;
+    font-size: 13px;
+    font-style: italic;
+    line-height: 18px;
+    margin: 5px 0;
 }
 
 
@@ -166,9 +152,14 @@ h5.position {
 	font-weight: normal;
 }
 
+#education .position strong {
+    display: block;
+    margin-top: 5px;
+}
+
 #education dl dt {
-	float: left;
-	clear: both;
+    clear: both;
+    float: left;
 }
 
 #education dl dt::after {
@@ -176,8 +167,8 @@ h5.position {
 }
 
 #education dl dd {
-	float: left;
-	color: #222;
+    color: #222;
+    float: left;
 }
 
 #education dl dd::after {
@@ -186,9 +177,9 @@ h5.position {
 }
 
 #education dl::after {
-	clear: both;
-	display: block;
-	content: "";
+    display: block;
+    clear: both;
+    content: "";
 }
 
 .fineprint {
@@ -198,7 +189,30 @@ h5.position {
 /******************************************************************************/
 /* Footer */
 footer {
-	margin: 40px 15%;
-	border-top: solid 1px #EEE;
+    border-top: solid 1px #EEE;
+    margin: 40px 15%;
 }
 
+/************************/
+@media (min-width: 680px) {
+    #data, header h1 {
+        border-right: solid 1px #EEE;
+        float: left;
+        text-align: right;
+        width: 35%;
+    }
+
+    #work-experience, #education, header h2 {
+        margin-left: 35%;
+    }
+
+    header h2 {
+        font-style: normal;
+        line-height: 40px;
+        text-align: left;
+    }
+
+    h3 {
+        text-align: left;
+    }
+}
