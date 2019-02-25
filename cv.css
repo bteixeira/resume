@@ -113,13 +113,26 @@ div.job {
 	margin-top: 30px;
 }
 
-h5.timeline {
+.timeline {
     color: #000;
     font-size: 12px;
     font-style: italic;
 }
 
-h5.position {
+.timeline .time-ellapsed {
+    color: #777;
+    font-style: normal;
+    font-weight: bold;
+    margin-left: 5px;
+}
+.timeline .time-ellapsed:before {
+    content: "[ ";
+}
+.timeline .time-ellapsed:after {
+    content: " ]";
+}
+
+.position {
     color: #000;
     font-size: 18px;
     font-weight: bold;
