@@ -214,7 +214,9 @@ section:not(:last-child) {
 /******************************************************************************/
 /* Media queries */
 
-@media (min-width: 680px) {
+/* On screens larger than mobile, create a two-column layout with the #data on
+ * the left and then #work-experience and #education on the right */
+@media print, (min-width: 680px) {
 
     /* Set up flex containers */
     .container {
@@ -245,5 +247,39 @@ section:not(:last-child) {
     }
     h3 {
         text-align: left;
+    }
+}
+/* For printing, change the two-column layout a bit. Reduce the width and line
+ * spacing of the left column to allow fitting nicely on two pages. Also change
+ * the header to be vertically stacked on the right column. */
+@media print {
+    header {
+        background: none;
+        color: #444;
+        padding: 0;
+    }
+    header .container {
+        align-items: flex-end;
+        flex-direction: column;
+    }
+    header h1, header h2 {
+        border: 0;
+        text-align: left;
+        width: 70%
+    }
+    .container {
+        margin: 0;
+    }
+    #data, header h1 {
+        flex-basis: 30%;
+    }
+    #data h4:not(:first-of-type) {
+        margin-top: 20px;
+    }
+    #data ul, #data p {
+        line-height: 1.75;
+    }
+    #work-experience, #education, header h2 {
+        flex-basis: 70%;
     }
 }
