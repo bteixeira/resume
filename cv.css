@@ -97,35 +97,42 @@ div.job {
 .timeline {
     color: #000;
     font-size: 12px;
-    font-style: italic;
 }
 
 .timeline .time-ellapsed {
     color: #777;
-    font-style: normal;
-    font-weight: bold;
+    font-weight: 600;
     margin-left: 5px;
+    font-size: 11px;
+
 }
 .timeline .time-ellapsed:before {
-    content: "[ ";
+    content: "[\2009";
 }
 .timeline .time-ellapsed:after {
-    content: " ]";
+    content: "\2009]";
 }
 
 .position {
     color: #000;
     font-size: 18px;
     font-weight: bold;
-    margin: 8px 0;
+    margin: 8px 0 4px;
 }
 
-.topics-list li::before, .bullet-list li::before {
-	content: '\2713\00a0';
+.topics-list, .bullet-list {
+    list-style: square;
+    margin-left: 2em;
+}
+
+.location {
+    font-size: 12px;
+    font-weight: 400;
+    font-style: italic;
 }
 
 .company-description, .fineprint {
-	color: #777;
+	color: #666;
     font-size: 90%;
     font-style: italic;
 }
