@@ -95,13 +95,14 @@ h3 {
     text-align: center;
 }
 
-div.job {
+.job {
 	margin-top: 30px;
 }
 
 .timeline {
     color: #000;
     font-size: 12px;
+    margin-top: 4px;
 }
 
 .timeline .time-ellapsed {
@@ -122,7 +123,6 @@ div.job {
     color: #000;
     font-size: 18px;
     font-weight: bold;
-    margin: 8px 0 4px;
 }
 
 .topics-list, .bullet-list {
@@ -154,42 +154,19 @@ div.job {
 /******************************************************************************/
 /* Education */
 
-#education h5.position {
-	font-weight: normal;
+.institute {
+    line-height: 1.2;
+    margin-top: 4px;
 }
 
-#education .position strong {
-    display: block;
-    margin-top: 5px;
+.publication {
+    margin-top: 15px;
+    padding-left: 15px;
 }
 
-#education dl dt {
-    clear: both;
-    float: left;
-}
-
-#education dl dt::after {
-	content: '\00a0';
-}
-
-#education dl dd {
-    color: #222;
-    float: left;
-}
-
-#education dl dd::after {
-	clear: both;
-	content: "";
-}
-
-#education dl::after {
-    display: block;
-    clear: both;
-    content: "";
-}
-
-.fineprint {
-	clear: both;
+.publication .position {
+    font-size: 16px;
+    font-weight: normal;
 }
 
 /******************************************************************************/
