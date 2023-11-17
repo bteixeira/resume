@@ -147,9 +147,13 @@ h3 {
     font-size: 13px;
     font-style: italic;
     line-height: 18px;
-    margin: 5px 0;
+    margin: 6px 0;
 }
 
+.job-sub-section {
+    font-weight: 500;
+    margin-top: 12px;
+}
 
 /******************************************************************************/
 /* Education */
