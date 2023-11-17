@@ -242,6 +242,9 @@ section:not(:last-child) {
  * spacing of the left column to allow fitting nicely on two pages. Also change
  * the header to be vertically stacked on the right column. */
 @media print {
+    html, body {
+        line-height: 1.5;
+    }
     header {
         background: none;
         color: #444;
@@ -270,5 +273,9 @@ section:not(:last-child) {
     }
     #work-experience, #education, header h2 {
         flex-basis: 70%;
+    }
+    a, a:visited {
+        color: #333;
+        text-decoration: underline;
     }
 }
