@@ -5,7 +5,7 @@ html, body {
     background-color: white;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
-	line-height: 1.9;
+    line-height: 1.9;
 }
 
 *::selection {
@@ -23,16 +23,16 @@ em {
 }
 
 strong {
-	font-weight: bold;
+    font-weight: bold;
 }
 
 a, a:visited {
-	color: #3BE;
-	text-decoration: none;
+    color: #3BE;
+    text-decoration: none;
 }
 
 a:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 
@@ -49,13 +49,13 @@ header {
 }
 
 h1 {
-	font-size: 40px;
+    font-size: 40px;
     line-height: 1;
     margin-bottom: 15px;
 }
 
 h2 {
-	font-size: 150%;
+    font-size: 150%;
     font-style: italic;
 }
 
@@ -64,10 +64,11 @@ h2 {
 /* Left column */
 
 #data h4 {
-	font-size: 16px;
-	font-weight: bold;
+    font-size: 16px;
+    font-weight: bold;
     margin-bottom: 5px;
 }
+
 #data h4:not(:first-of-type) {
     margin-top: 30px;
 }
@@ -77,11 +78,11 @@ h2 {
 }
 
 .tag-list li {
-	display: inline;
+    display: inline;
 }
 
 .tag-list li:not(:last-child):after {
-	content: ", ";
+    content: ", ";
 }
 
 /******************************************************************************/
@@ -91,12 +92,12 @@ h3 {
     color: #444;
     font-size: 150%;
     font-weight: bold;
-	margin-bottom: 20px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
 .job {
-	margin-top: 30px;
+    margin-top: 30px;
 }
 
 .timeline {
@@ -112,9 +113,11 @@ h3 {
     font-size: 11px;
 
 }
+
 .timeline .time-ellapsed:before {
     content: "[\2009";
 }
+
 .timeline .time-ellapsed:after {
     content: "\2009]";
 }
@@ -137,7 +140,7 @@ h3 {
 }
 
 .company-description, .fineprint {
-	color: #666;
+    color: #666;
     font-size: 90%;
     font-style: italic;
 }
@@ -216,6 +219,7 @@ section:not(:last-child) {
         display: flex;
         flex-wrap: wrap;
     }
+
     main .container {
         justify-content: flex-end;
         padding-top: 20px;
@@ -233,15 +237,18 @@ section:not(:last-child) {
     #work-experience, #education, header h2 {
         flex-basis: 65%;
     }
+
     header h2 {
         font-style: normal;
         line-height: 40px;
         text-align: left;
     }
+
     h3 {
         text-align: left;
     }
 }
+
 /* For printing, change the two-column layout a bit. Reduce the width and line
  * spacing of the left column to allow fitting nicely on two pages. Also change
  * the header to be vertically stacked on the right column. */
@@ -249,37 +256,45 @@ section:not(:last-child) {
     html, body {
         line-height: 1.5;
     }
+
     header {
         background: none;
         color: #444;
         padding: 0;
     }
+
     header .container {
         align-items: flex-end;
         flex-direction: column;
     }
+
     header h1, header h2 {
         border: 0;
         text-align: left;
         width: 70%
     }
+
     .container {
         margin: 0;
     }
+
     #data, header h1 {
         flex-basis: 30%;
     }
+
     #data h4:not(:first-of-type) {
         margin-top: 20px;
     }
+
     #data ul, #data p {
         line-height: 1.75;
     }
+
     #work-experience, #education, header h2 {
         flex-basis: 70%;
     }
-    a, a:visited {
-        color: #333;
-        text-decoration: underline;
+
+    .hide-print, .publication {
+        display: none;
     }
 }
